@@ -1,0 +1,94 @@
+#27.01.2026
+#Mājasdarbs: Python datu tipi
+#Tēmas: Numbers & Strings, Lists
+
+#Numbers & Strings
+
+#Definē divus skaitļu mainīgos:
+skaitlis1 = 5
+skaitlis2 = 3.5
+
+#Aprēķini šo skaitļu summu.
+skaitlis1+skaitlis2
+
+#Izvadi rezultātu divos veidos:
+print(skaitlis1+skaitlis2)
+print("Summa:", skaitlis1+skaitlis2)
+
+#Definē teksta mainīgo (string).
+vards =  "Darja"
+print("Vārds:", vards)
+
+# Izvadi: teksta garumu, pirmo simbolu, tekstu apgrieztā secībā
+print(len(vards))
+print(vards[0])
+print(vards[::-1])
+
+
+#Lists
+
+#Izveido sarakstu (list) ar vismaz 5 elementiem (drīkst būt dažādi datu tipi).
+pukes = ["Rozes","Lilijas","Tulpes","Narcises","Krizantēmas"]
+
+#Izvadi:visu sarakstu, pirmo elementu, pēdējo elementu
+print(pukes)
+print(pukes[0])
+print(pukes[-1])
+
+#Pievieno sarakstam vienu jaunu elementu.
+pukes.append("Peonijas")
+print(pukes)
+
+#Nomaini vienu esošu elementu sarakstā.
+pukes[3] = "Margrietiņas"
+print(pukes)
+
+#Izvadi saraksta elementu skaitu.
+print(len(pukes))
+
+
+
+#Dictionary
+
+#Izveido vārdnīcu (dictionary) ar informāciju par sevi.
+info = {"Vārds":"Darja","Vecums":"16","Pilsēta":"Vilani"}
+
+#Izvadi katru vērtību atsevišķi, izmantojot atslēgas. 
+print("Vārds:", info["Vārds"])
+print("Vecums:", info["Vecums"])
+print("Pilsēta:", info["Pilsēta"])
+
+#Pievieno vārdnīcai jaunu atslēgu.
+info["Skola"] = "Viānu vidusskola"
+print("Skola:", info["Skola"])
+
+#Izmanto un izvada: .keys(), .values()
+print(info.keys()) #rāda visas atslēgas
+print(info.values()) #rāda visas vērtības
+
+
+
+#Papildu izaicinājuma uzdevums
+#Izaicinājums: Datu tipu apvienošana
+
+#Izveido sarakstu (list), kurā atrodas: vismaz viens skaitlis, viens teksts, viena vārdnīca (dictionary)
+dati = [2,"Python", {"kurss": "Programmēšana"}]
+
+#Izvadi: visu sarakstu, katru elementu atsevišķi
+print(dati)
+print(dati[0])
+print(dati[1])
+print(dati[2])
+
+#No vārdnīcas, kas atrodas sarakstā: izvada vienu vērtību, izmantojot atslēgu
+print(dati[2]["kurss"])
+
+#Pievieno vārdnīcai jaunu atslēgu–vērtību pāri
+dati[2]["krāsa"] = "zila"
+print(dati[2])
+
+#Izmantojot tekstu no saraksta: nosaki teksta garumu, izvada tekstu ar lielajiem burtiem, izvada tekstu apgrieztā secībā
+teksts = dati[1]
+print(len(teksts))
+print(teksts.upper())
+print(teksts[::-1])
