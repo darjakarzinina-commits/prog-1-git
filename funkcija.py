@@ -31,8 +31,8 @@ def elementu_skaits(saraksts):
     skaits = 0
     for elements in saraksts:
          skaits += 1
-         return skaits
-    print(elementu_skaits([3,7,1,9])) 
+    return skaits
+print(elementu_skaits([3,7,1,9])) 
 
 #Piemērs ar vārdnīcu (dictionary)
 #Funkcija, kas pārbauda vai vārdnīca ir noteikta atslēga
