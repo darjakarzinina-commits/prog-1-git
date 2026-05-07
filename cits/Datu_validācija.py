@@ -5,7 +5,7 @@
 vecums =  input("Ievadi vecumu:")
 print(vecums)
 
-#Pārbaude, vai ir skaitlis
+#Pārbauda, vai ir skaitlis
 if vecums.isdigit(): #metode isdigit() pārbauda, vai dotie dati ir skaitlis un atgriež TRUE/FALSE vērtību
     print("Ir skailis")
     #Vecuma pārbaude
