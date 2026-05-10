@@ -8,3 +8,7 @@
 #"r" - lasa failu
 #"a" - papildina failu (pievieno datus beigās)
 #\n - nozīmē jauna rinda
+#for line in f: - lasa failu rindu pa rindai
+#next(f) - izlaiž pirmo rindu (virsrakstus)
+#.strip() - noņem tukšumus un \n
+#.split(",") - sadala tekstu divās daļās
