@@ -24,7 +24,7 @@ else:
 
        if not atrasts: #atrasts == False
           print("Nav atrasts")
-
+         
 
 
 
