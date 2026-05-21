@@ -1,0 +1,94 @@
+#Gatavošanas pābaudes darbam
+#17/05
+#1. uzdevums — Datu kvalitāte (6 p)
+#1.1. Nosaki, kuri dati ir kvalitatīvi. Pamato. (4 p)
+#Laura,17,Rīga
+#???,-15,Mēness
+#Jānis,18
+
+#Piernie dati ir paši kvalitatīvākie, jo otrajā un trešaja piertukst informācijas vai tā ir neprecīza ar kļūdām
+
+#1.2. Pārveido dotos nestrukturētos datus strukturētā tabulā. (2 p)
+#“Marta dzīvo Jelgavā un viņai ir 16 gadi.”
+
+#Marta, 16, Jelgava
+
+#2. uzdevums — Datu validācija (8 p)
+#2.1. Uzraksti programmu, kas pārbauda, vai ievadītais skaitlis ir robežās no 1 līdz 10. (5 p)
+skaitlis = input("Lūdzu ievadi skaitli no 1-10:")
+print(skaitlis)
+if skaitlis.isdigit():
+    print("Ir skailis")
+
+    if 1 <= int(skaitlis) <= 10:
+     print("Ir skaitlis no 1-10") 
+    else:
+        print("Nav skaitlis no 1-10")    
+else:
+ print("Nav skaitlis")
+
+#2.2. Paskaidro, kāpēc validācija ir svarīga programmās. (3 p)
+#Datu validācija ir vajadzīga, lai ievadīto datu pārbaudi pirms to izmantošanas.
+
+#3. uzdevums — Datu apstrāde CSV failā (10 p)
+#Dota datne:
+
+#produkts,cena
+#Piens,1.50
+#Maize,2.00
+#Sula,3.20
+#Cepumi,4.50
+
+#3.1. Uzraksti programmu, kas izvada tikai produktus, kuru cena ir lielāka par 2.00. (5 p)
+#3.2. Aprēķini visu produktu kopējo summu. (5 p)
+
+kopeja_summa = 0
+
+with open("produkti.csv", encoding="utf-8") as f:
+    next(f)  
+
+    for rinda in f:
+        produkts, cena = rinda.strip().split(",")
+        cena = float(cena)
+
+        if cena > 2.00:
+            print(produkts)
+
+        kopeja_summa += cena
+
+print("Kopējā summa:", kopeja_summa)
+
+#4. uzdevums — Kārtošana (8 p)
+#4.1. Sakārto sarakstu dilstošā secībā. (3 p)
+ 
+scores = [7, 10, 5, 8, 9]
+ 
+scores.sort(reverse=True) 
+print(scores)
+#4.2. Paskaidro, kur dzīvē izmanto datu kārtošanu. Min vienu piemēru. 
+#internetveikalā preces var sakārtot pēc cenas — no lētākās līdz dārgākajai.
+
+#4.3. Uzraksti programmu, kas izvada 2 lielākos skaitļus sarakstā. (3 p)
+scores.sort(reverse=True)
+print(scores[:2])
+
+#5. uzdevums — Meklēšana (8 p)
+#5.1. Uzraksti programmu, kas pārbauda, vai skaitlis 15 atrodas sarakstā. (3 p)
+ 
+numbers = [5, 12, 15, 20]
+
+if 15 in numbers:
+    print("Atrasts")
+ 
+#5.2. Paskaidro, kāpēc meklēšana lielās sistēmās var būt lēnāka. (2 p)
+#Lielās sistēmās ir daudz datu, tāpēc datoram jāpārbauda vairāk informācijas un meklēšana notiek lēnāk.
+
+#5.3. Uzraksti programmu, kas CSV failā atrod produktu “Sula”. (3 p)
+with open("fails.csv", encoding="utf-8") as f:
+    next(f)
+ 
+    for rinda in f:
+       produkts, cena = rinda.strip().split(",")
+ 
+       if produkts == "Sula":
+           print("Atrasts")
