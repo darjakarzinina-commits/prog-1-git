@@ -1,3 +1,13 @@
+#2.1
+
+vards = input("Ievadi vārdu: ")
+print(vards)
+
+if vards.isupper():
+    print("Ir ievadīts ar lielo burtu")
+else: 
+    print("Nav ievadīts ar lielo burtu")
+
 
 
 #3. uzd
@@ -8,7 +18,6 @@ with open("dati_ieskaite.csv", encoding="utf-8") as f:
         if float(vecums) >= 18:
             print(vards)
 
-#3.1
 
 #4.1 uzd
 
