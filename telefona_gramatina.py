@@ -18,8 +18,8 @@ print(kontakts_1.uzvards)
 print(kontakts_1.talrunis)
 
 kontakts_1.talrunis = 26999999
-print("Kontakt info. 1.:", kontakts_1)
-print("Kontakt info. 2.:", kontakts_1)
+print(kontakts_1.vards, kontakts_1.uzvards, kontakts_1.talrunis)
+print(kontakts_2.vards, kontakts_2.uzvards, kontakts_2.talrunis)
 
 
 
